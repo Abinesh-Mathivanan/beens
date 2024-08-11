@@ -25,46 +25,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_ENV
-            echo "command=install" >> $GITHUB_ENV
-            echo "runner=yarn" >> $GITHUB_ENV
-            echo "lockfile=yarn.lock" >> $GITHUB_ENV
-            exit 0
-          elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
-            echo "manager=npm" >> $GITHUB_ENV
-            echo "command=ci" >> $GITHUB_ENV
-            echo "runner=npx --no-install" >> $GITHUB_ENV
-            echo "lockfile=package-lock.json" >> $GITHUB_ENV
-            exit 0
-          else
-            echo "Unable to determine package manager"
-            exit 1
-          fi
-        shell: /usr/bin/bash -e {0}
-
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: npm ci
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Build with Astro
-        run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build
+        run: npx astro build
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Upload artifact

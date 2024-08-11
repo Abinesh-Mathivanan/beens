@@ -18,7 +18,6 @@ export default defineConfig({
 	},
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
-		icon(),
 		tailwind({
 			applyBaseStyles: false,
 			nesting: true,

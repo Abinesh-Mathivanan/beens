@@ -1,0 +1,66 @@
+{
+    "experiences": [
+      { "title": "Machine Learning Engineer",
+        "description":
+        [ "Built a lot of stuff around CV using YOLO and OpenCV.",
+          "Implemented Hybrid model such as SVM + HMM for text detection systems."
+        ],
+        "startDate": " Apr 2023",
+        "endDate": "Sep 2023",
+        "company": "Artizence"
+      },
+      { "title": "Deep Learning Engineer",
+        "description":
+        [ "Designed and implemented deep learning models using Pytorch and Keras for brain-inspired hardware interface for emotional understanding in robots. Initially developed with 200k parameters, and later scaled."
+        ],
+        "startDate": "May 2022",
+        "endDate": "Nov 2022",
+        "company": "Neurala Vox AI"
+      },
+      { "title": "Software Engineering Intern",
+        "description":
+        [ "Contributed to simulating 3D models of the cube-sat and programmed the basic propulsion system using C++, resulting in 43% increased efficiency and programmed analytical systems in Julia and simulation graphs in Python Matplotlib."
+        ],
+        "startDate": "Nov 2021",
+        "endDate": "Apr 2022",
+        "company": "Helix Space Organization"
+      }
+    ],
+    "projects": [
+      { "name": "Siphus Cosmo-classifier",
+        "description": "Lambda Cosmology classifier using Cosmology Inspired Neural Networks. Built a duplicated dataset of 70,000 samples using ReACT cosmo software on 5 different cosmology models and trained using 250k parameters",
+        "image": "/siphus-cosmo.png"
+      },
+      { "name": "In-love.js",
+        "description": "In-love.js, a lightweight JavaScript library that adds delightful interactive animations to your web pages. Impress your CS crush the way nobody had done before.",
+        "image": "/in-love.js.png",
+        "github": "https://abinesh-mathivanan.github.io/inlove-docs.io/#/"
+      },
+      { "name": "Julia Snippets",
+        "description": "Efficiently write and navigate through code with ease using this comprehensive collection of code snippets for Julia.",
+        "image": "/julia.jfif",
+        "github": "https://marketplace.visualstudio.com/items?itemName=beens.julia-snippets"
+      },
+      { "name": "TemplateHub",
+        "description": "Templatehub is a platform that hosts meme templates from movies for free.",
+        "image": "/th-interface.png",
+        "github": "https://github.com/Abinesh-Mathivanan/Templatehub"
+      }
+    ],
+    "stack":
+    [
+      { "src": "/logos/astro.svg", "alt": "AstroJS Logo" },
+      { "src": "/logos/vercel.svg", "alt": "Vercel Logo" },
+      { "src": "/logos/tailwindcss.svg", "alt": "TailwindCSS Logo" },
+      { "src": "/logos/typescript.svg", "alt": "TypeScript Logo" },
+      { "src": "/logos/css.svg", "alt": "CSS Logo" },
+      { "src": "/logos/html5.svg", "alt": "HTML Logo" },
+      { "src": "/logos/astro.svg", "alt": "AstroJS Logo" },
+      { "src": "/logos/vercel.svg", "alt": "Vercel Logo" },
+      { "src": "/logos/tailwindcss.svg", "alt": "TailwindCSS Logo" },
+      { "src": "/logos/typescript.svg", "alt": "TypeScript Logo" },
+      { "src": "/logos/css.svg", "alt": "CSS Logo" },
+      { "src": "/logos/html5.svg", "alt": "HTML Logo" }
+    ]
+  }
+

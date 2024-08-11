@@ -1,0 +1,68 @@
+---
+import data from "@/data/cv.json";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="mb-10 space-y-6">
+		<div class="flex items-center justify-between">
+			<h1 class="title">About</h1>
+			<button class="rounded-sm border px-4 py-2" onclick="window.open('/src/data/abinesh_resume.pdf', '_blank')" style="border-color: var(--theme-heading);"> My Resume </button>
+		</div>
+
+		<div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-2">
+			{
+				data.experiences.map((experience) => (
+					<div class="rounded-lg border p-4 shadow-md" style="border-color: var(--theme-heading);">
+						<h2 class="text-lg font-semibold mb-1" >{experience.title}</h2>
+						<p class="mt-1 text-base font-medium text-accent mb-1"> {experience.company} </p>
+						<p class="mt-1 text-sm mb-3">
+							{experience.startDate} - {experience.endDate}
+						</p>
+						<ul class="mt-2 list-inside list-disc text-sm">
+							{Array.isArray(experience.description) ? (
+								experience.description.map((point: string) => <li>{point}</li>)
+							) : (
+								<li>{experience.description}</li>
+							)}
+						</ul>
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	<div class="space-y-6">
+		<h1 class="title" style="color: var(--theme-heading);">Projects</h1>
+		<div class="flex flex-row gap-4 overflow-x-auto p-4">
+			<div class="flex flex-row gap-4">
+				{
+					data.projects.map((projects) => (
+						<div class="min-w-[400px] max-w-[500px] rounded-lg border p-4 shadow-md" style="border-color: var(--theme-heading);">
+							<h2 class="text-lg font-semibold text-accent">{projects.name} </h2>
+							<p class="mt-4 text-sm">{projects.description}</p>
+							<a
+								class="mt-4 inline-block w-fit rounded border px-3 py-1"
+								href={projects.github}
+								rel="noopener noreferrer"
+								style="border-color: var(--theme-heading);"
+								target="_blank"
+							>
+								GitHub
+							</a>
+							<img
+								alt={projects.name}
+								class="w-50 mx-auto mt-4 h-40 rounded-lg object-cover"
+								src={projects.image}
+							/>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</PageLayout>

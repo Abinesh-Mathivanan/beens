@@ -16,6 +16,7 @@
     "@astrojs/rss": "4.0.7",
     "@astrojs/sitemap": "3.1.6",
     "@astrojs/tailwind": "5.1.0",
+    "@vitejs/plugin-vue": "^5.1.2",
     "astro": "4.12.1",
     "astro-expressive-code": "^0.35.3",
     "astro-icon": "^1.1.0",
@@ -25,6 +26,7 @@
     "satori": "0.10.14",
     "satori-html": "^0.3.2",
     "sharp": "^0.33.4",
+    "vite": "^5.4.0",
     "vite-plugin-commonjs": "^0.10.1"
   },
   "devDependencies": {

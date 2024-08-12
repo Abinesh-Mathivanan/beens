@@ -20,7 +20,7 @@
     "astro": "4.12.1",
     "astro-expressive-code": "^0.35.3",
     "astro-icon": "^1.1.0",
-    "cheerio": "1.0.0-rc.10",
+    "cheerio": "1.0.0-rc.3",
     "cssnano": "^7.0.4",
     "rehype-external-links": "^3.0.0",
     "satori": "0.10.14",

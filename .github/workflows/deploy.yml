@@ -3,7 +3,7 @@
 # To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
 #
 name: Deploy blog to Pages
-
+ 
 on:
   # Runs on pushes targeting the default branch
   push:

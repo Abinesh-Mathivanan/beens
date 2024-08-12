@@ -12,7 +12,6 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        // Alias to handle cheerio import
         cheerio: require.resolve('cheerio/lib/cheerio.js'),
       },
     },

@@ -4,21 +4,23 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import icon from "astro-icon";
 
-// https://astro.build/config
-export default defineConfig({
-    site: 'https://beens.github.io',
-    vite: {
-        ssr: {
-          noExternal: ['@iconify/tools', 'cheerio']
-        },
-      },
-    integrations: [
-		icon(),
-        mdx(),
-        sitemap(),
-        tailwind({
-            applyBaseStyles: false
-        })
-    ]
-});
+// No need to import cheerio explicitly, as it's already handled by astro-icon
 
+// (link unavailable)
+export default defineConfig({
+  site: '(link unavailable)',
+  vite: {
+    ssr: {
+      // Exclude @iconify/tools and cheerio from external dependencies
+      noExternal: ['@iconify/tools', 'cheerio'],
+    },
+  },
+  integrations: [
+    icon(),
+    mdx(),
+    sitemap(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
+});

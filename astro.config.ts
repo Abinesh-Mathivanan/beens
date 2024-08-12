@@ -7,6 +7,11 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
     site: 'https://beens.github.io',
+    vite: {
+        ssr: {
+          noExternal: ['@iconify/tools', 'cheerio']
+        },
+      },
     integrations: [
 		icon(),
         mdx(),
@@ -16,3 +21,4 @@ export default defineConfig({
         })
     ]
 });
+
